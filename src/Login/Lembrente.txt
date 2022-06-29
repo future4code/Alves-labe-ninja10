@@ -1,2 +1,6 @@
-Refazer cod pedrp vinicius 
+Refazer cod pedro vinicius 
 (exemplo de cod para login)
+COres decididas No geral é só amarelo, preto e branco mesmo, o hexadecimal do amarelo que usei é 
+(#FFE500)
+Remodelar o css do login pois essa cor nao está ok para o site, 
+testar se o login esta responsivo.
