@@ -54,8 +54,8 @@ export default class HomePage extends Component {
             <TituloHome>LabeNinja</TituloHome>
             <SubtituloHome>O talento certo no momento certo</SubtituloHome>
             <ContainerBotao>
-                <BotaoNinja>Quero ser um Ninja</BotaoNinja>
-                <BotaoNinja>Contratar um Ninja</BotaoNinja>
+                <BotaoNinja onClick={this.props.irParaCadastro}>Quero ser um Ninja</BotaoNinja>
+                <BotaoNinja onClick={this.props.irParaContratar}>Contratar um Ninja</BotaoNinja>
             </ContainerBotao>
         </Home>
       </div>

@@ -67,8 +67,8 @@ export default class HeaderPage extends Component {
         <HeaderEstilizado>
             <TituloHeader>LabeNinja</TituloHeader>
             <div>
-            <BotaoHome>Home</BotaoHome>
-            <BotaoCarrinho>Carrinho</BotaoCarrinho>
+            <BotaoHome onClick={this.props.irParaHome}>Home</BotaoHome>
+            <BotaoCarrinho onClick={this.props.irParaCarrinho}>Carrinho</BotaoCarrinho>
             </div>
         </HeaderEstilizado>
     
