@@ -4,7 +4,17 @@ import Home from './components/Paginas/Home'
 import Cadastro from './components/Paginas/Cadastro'
 import Carrinho from './components/Paginas/Carrinho'
 import Contratar from './components/Paginas/TelaContratar/Contratar'
+import axios from 'axios'
 
+const body = {
+  name: "projeto-labe-ninja"
+}
+
+axios.post(" https://labeninjas.herokuapp.com",body,{
+  headers:{
+    Authorization: "3be8ffbf-eaa1-4997-bfb3-8228a631e389"
+  }   
+})
 
 
 
