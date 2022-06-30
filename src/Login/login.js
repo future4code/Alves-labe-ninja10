@@ -9,7 +9,7 @@ function Login() {
           <div className='container-login'>
              <div className='wrap-login'> 
               <form Login-form>
-                <span className='Login-form-title'> Bem vindo</span>
+                <span className='Login-form-title'> Bem vindo Labeninja</span>
                 <span className='login-form-title'>
                     <img src='#'alt='LogoExp'/>
                 </span>
@@ -32,7 +32,8 @@ function Login() {
                 </div>
                 <div cLassName='text-singup'>
                     <span className='txt1'>Não possui conta?</span>
-                    <a className='txt2' href='#'> Criar conta.</a>
+                    <a className='txt2' href='#'> Criar conta.</a>  /(linkar pag de criaçao)
+                  
                 </div>
 
               </form>
