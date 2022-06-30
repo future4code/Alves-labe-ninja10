@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import axios from 'axios'
+import { BASE_URL } from '../../../constants/urls'
+import { key } from '../../../constants/key'
 
 export const CardContainer = styled.div `
     display: grid;
@@ -24,44 +27,52 @@ export const BotaoCards = styled.button`
             color:#FFE500;
             transition: 0.2s;
         }
-
-    
-
 `
 
 
+
+
 export default class Cards extends Component {
+    state ={
+        listjobs:[]
+    }
+
+
+    componentDidMount(){
+        this.pegaJob()
+    }
+
+
+    pegaJob = () =>{
+        axios.get(`${BASE_URL}/jobs`,{
+            headers:{
+                Authorization:`${key}`
+            }
+        }).then((resp)=>{
+            console.log(resp.data.jobs)
+            this.setState({listjobs:resp.data.jobs})
+
+        }).catch((err) =>{
+            console.log(err)
+        })
+    }
+
+
   render() {
+    const jobs = this.state.listjobs.map((cards) =>{
+            return <CardItem key ={cards.id}>
+                <h3>{cards.title}</h3>
+                <p><b>Preço: </b>{`R$${cards.price},00`}</p>
+                <p><b>Prazo: </b> {cards.dueDate.split('T')[0]} </p>
+                <BotaoCards>Ver Detalhes</BotaoCards>
+                <BotaoCards>Adicionar Carrinho</BotaoCards>
+            </CardItem>
+            
+    })
+
     return (
       <CardContainer>
-        <CardItem>
-            <h3>Pastelaria</h3>
-            <p><b>Preço: </b> R$5.00</p>
-            <p><b>Prazo: </b> 30/04/2022 </p>
-            <BotaoCards>Ver Detalhes</BotaoCards>
-            <BotaoCards>Adicionar Carrinho</BotaoCards>
-        </CardItem>
-        <CardItem>
-            <h3>Piloto de Fuga</h3>
-            <p><b>Preço: </b>  R$4000.00</p>
-            <p><b>Prazo: </b> 31/10/2021 </p>
-            <BotaoCards>Ver Detalhes</BotaoCards>
-            <BotaoCards>Adicionar Carrinho</BotaoCards>
-        </CardItem>
-        <CardItem>
-            <h3>Vendedor de Calcinhas</h3>
-            <p><b>Preço: </b>  R$100.000</p>
-            <p><b>Prazo: </b> 31/12/2065</p>
-            <BotaoCards>Ver Detalhes</BotaoCards>
-            <BotaoCards>Adicionar Carrinho</BotaoCards>
-        </CardItem>
-        <CardItem>
-            <h3>Ateio fogo na caixa d'água</h3>
-            <p><b>Preço: </b>  R$100.00</p>
-            <p><b>Prazo: </b>  08/08/2021</p>
-            <BotaoCards>Ver Detalhes</BotaoCards>
-            <BotaoCards>Adicionar Carrinho</BotaoCards>
-        </CardItem>
+        {jobs}
         </CardContainer>
     )
   }

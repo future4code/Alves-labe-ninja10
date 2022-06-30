@@ -32,6 +32,10 @@ export const InputBusca = styled.input `
 
 
 export default class Contratar extends Component {
+
+
+
+  
   render() {
     return (
       <div>
@@ -40,7 +44,7 @@ export default class Contratar extends Component {
             <InputContratar placeholder='Valor Mínimo' type='number'/>
             <InputContratar placeholder='Valor Maximo' type='number'/>
             </InputValores>
-            <InputBusca placeholder='Busa por Título'/>
+            <InputBusca placeholder='Busca por Título'/>
             <SelecContratar>
                 <option>Sem Ordenação</option>
                 <option>Menor Valor</option>
