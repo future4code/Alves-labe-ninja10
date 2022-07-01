@@ -3,8 +3,8 @@ import styled from "styled-components";
 import logoNinja from "../../img/LogoNinja.png";
 
 export const IconNinja = styled.img`
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   margin-right: 10px;
 `;
 
