@@ -9,7 +9,7 @@ export const IconNinja = styled.img`
 `;
 
 export const HeaderEstilizado = styled.div`
-  @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&display=swap");
+  @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&display=swap');
 
   border: 1px solid black;
   background-color: #ffe500;
@@ -21,7 +21,7 @@ export const HeaderEstilizado = styled.div`
   -webkit-box-pack: justify;
   justify-content: space-between;
   font-family: "Josefin Sans", sans-serif;
-`;
+`
 
 export const TituloHeader = styled.h2`
   display: block;
@@ -32,7 +32,7 @@ export const TituloHeader = styled.h2`
   margin-inline-end: 0px;
   font-weight: bold;
   font-style: italic;
-`;
+`
 
 export const BotaoHome = styled.button`
   background-color: white;
@@ -45,7 +45,7 @@ export const BotaoHome = styled.button`
     color: #ffe500;
     transition: 0.2s;
   }
-`;
+`
 
 export const BotaoCarrinho = styled.button`
   background-color: black;
@@ -64,9 +64,9 @@ export default class HeaderPage extends Component {
   render() {
     return (
       <HeaderEstilizado>
-        <TituloHeader>
-          <IconNinja src={logoNinja} />
-          LabeNinja
+        
+        <TituloHeader src={logoNinja}>
+            LabeNinja
         </TituloHeader>
         <div>
           <BotaoHome onClick={this.props.irParaHome}>Home</BotaoHome>

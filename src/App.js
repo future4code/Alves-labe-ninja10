@@ -3,7 +3,7 @@ import Header from './components/Paginas/Header'
 import Home from './components/Paginas/Home'
 import Cadastro from './components/Paginas/Cadastro'
 import Carrinho from './components/Paginas/Carrinho'
-import Contratar from './components/Paginas/TelaContratar/Contratar'
+import Jobs from './components/Paginas/Jobs'
 import axios from 'axios'
 
 const body = {
@@ -34,7 +34,7 @@ export default class App extends Component {
       case 'carrinho':
         return <Carrinho/>
       case 'contratar':
-        return <Contratar/>
+        return <Jobs/>
       default:
         return <Home/>
 
