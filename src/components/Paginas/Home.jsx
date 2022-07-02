@@ -47,7 +47,7 @@ export default class HomePage extends Component {
     return (
       <div>
         <Home>
-          <LogoNinja src={logoTela} />
+        <LogoNinja src={logoTela} />
           <TituloHome>LabeNinja</TituloHome>
           <SubtituloHome>O talento certo no momento certo</SubtituloHome>
           <ContainerBotao>
