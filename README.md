@@ -1,6 +1,6 @@
 ## 🛍️ Projeto Labeninja
 
-Projeto desenvolvido em grupo e para a empresa fictícia "Loabeninja"
+Projeto desenvolvido em grupo e para a empresa fictícia "Labeninja"
 
 ## Screenshot
 
