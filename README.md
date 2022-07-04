@@ -8,6 +8,7 @@ Projeto desenvolvido em grupo e para a empresa fictícia "Labeninja"
 
 ## Acessar o site
 
+laughable-throne.surge.sh
 
 ## Ferramentas
 
