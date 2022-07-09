@@ -4,6 +4,7 @@ import Home from './components/Paginas/Home'
 import Cadastro from './components/Paginas/Cadastro'
 import Carrinho from './components/Paginas/Carrinho'
 import Jobs from './components/Paginas/Jobs'
+import Detalhes from './components/Paginas/Detalhes'
 import axios from 'axios'
 
 const body = {
@@ -32,9 +33,11 @@ export default class App extends Component {
       case 'cadastro':
         return <Cadastro/>
       case 'carrinho':
-        return <Carrinho/>
+        return <Carrinho irParaContratar ={this.telaContratar}/>
       case 'contratar':
-        return <Jobs/>
+        return <Jobs irParaDetalhes ={this.telaDetalhes} irParaCarrinho ={this.telaCarrinho}/>
+      case 'detalhes':
+        return <Detalhes irParaContratar ={this.telaContratar}/>
       default:
         return <Home/>
 
@@ -56,6 +59,10 @@ export default class App extends Component {
 
   telaHome = () =>{
     this.setState({telaAtual:"home"})
+  }
+
+  telaDetalhes = () => {
+    this.setState({telaAtual:"detalhes"})
   }
 
   render() {

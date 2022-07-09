@@ -154,8 +154,8 @@ export default class Cards extends Component {
                 <h3>{cards.title}</h3>
                 <p><b>Preço: </b>{`R$${cards.price},00`}</p>
                 <p><b>Prazo: </b> {cards.dueDate.split('T')[0]} </p>
-                <BotaoCards>Ver Detalhes</BotaoCards>
-                <BotaoCards>Adicionar Carrinho</BotaoCards>
+                <BotaoCards onClick={() => this.props.irParaDetalhes(cards.id)}>Ver Detalhes</BotaoCards>
+                <BotaoCards onClick={this.props.irParaCarrinho}>Adicionar Carrinho</BotaoCards>
             </CardItem>
             
     })

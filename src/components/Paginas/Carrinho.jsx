@@ -39,7 +39,7 @@ export default class Carrinho extends Component {
         <CarrinhoContainer>
             <h3>Devs</h3>
             <p>R$52,00 </p>
-            <BotaoRemover>Remover</BotaoRemover>
+            <BotaoRemover onClick={this.props.irParaContratar}>Remover</BotaoRemover>
         </CarrinhoContainer>
       </div>
     )
